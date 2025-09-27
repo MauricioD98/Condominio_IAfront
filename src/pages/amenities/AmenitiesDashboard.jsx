@@ -67,7 +67,7 @@ const AmenitiesDashboard = () => {
 
   const statCards = [
     {
-      title: 'Total Amenidades',
+      title: 'Total Eventos',
       value: stats.totalAmenities,
       icon: Waves,
       color: 'blue',
@@ -122,7 +122,7 @@ const AmenitiesDashboard = () => {
               className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 flex items-center"
             >
               <Plus className="h-5 w-5 mr-2" />
-              Nueva Amenidad
+              Nuevo Evento
             </button>
           </PermissionGate>
           <PermissionGate permission="add_amenityreservation">
