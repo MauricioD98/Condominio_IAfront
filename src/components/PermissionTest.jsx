@@ -6,9 +6,10 @@ const PermissionTest = () => {
   const { permissions, hasPermission, canAccessModule } = usePermissions();
 
   return (
+  
     <div className="p-6 bg-white rounded-lg shadow">
       <h2 className="text-xl font-bold mb-4">Prueba de Permisos</h2>
-      
+      {/*
       <div className="mb-4">
         <h3 className="font-semibold mb-2">Permisos del Usuario:</h3>
         <div className="bg-gray-100 p-3 rounded text-sm">
@@ -66,7 +67,9 @@ const PermissionTest = () => {
           </PermissionGate>
         </div>
       </div>
+      */}
     </div>
+
   );
 };
 

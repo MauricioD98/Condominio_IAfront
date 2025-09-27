@@ -467,15 +467,15 @@ const Amenities = () => {
       {/* Header */}
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Gestión de Amenidades</h1>
-          <p className="text-gray-600">Administra amenidades y reservas del condominio</p>
+          <h1 className="text-2xl font-bold text-gray-900">Gestión de Eventos</h1>
+          <p className="text-gray-600">Administracion de Eventos y Reservas</p>
         </div>
         <button
           onClick={() => setShowModal(true)}
           className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 flex items-center"
         >
           <Plus className="h-5 w-5 mr-2" />
-          Nuevo {activeTab === 'amenities' ? 'Amenidad' : 'Reserva'}
+          Nuevo {activeTab === 'amenities' ? 'Evento' : 'Reserva'}
         </button>
       </div>
 
@@ -483,7 +483,7 @@ const Amenities = () => {
       <div className="border-b border-gray-200">
         <nav className="-mb-px flex space-x-8">
           {[
-            { id: 'amenities', name: 'Amenidades', icon: MapPin },
+            { id: 'amenities', name: 'Eventos', icon: MapPin },
             { id: 'schedules', name: 'Horarios', icon: Clock },
             { id: 'rates', name: 'Tarifas', icon: Users },
             { id: 'reservations', name: 'Reservas', icon: Calendar }
@@ -514,14 +514,14 @@ const Amenities = () => {
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
             <input
               type="text"
-              placeholder={`Buscar ${activeTab === 'amenities' ? 'amenidades' : 'reservas'}...`}
+              placeholder={`Buscar ${activeTab === 'amenities' ? 'eventos' : 'reservas'}...`}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
           </div>
           <div className="text-sm text-gray-600">
-            {activeTab === 'amenities' && `${amenities.length} amenidades`}
+            {activeTab === 'amenities' && `${amenities.length} eventos`}
             {activeTab === 'schedules' && `${schedules.length} horarios`}
             {activeTab === 'rates' && `${rates.length} tarifas`}
             {activeTab === 'reservations' && `${reservations.length} reservas`}
@@ -540,13 +540,13 @@ const Amenities = () => {
             )}
           </div>
           <h3 className="text-lg font-medium text-gray-900 mb-2">
-            {activeTab === 'amenities' && 'No hay amenidades'}
+            {activeTab === 'amenities' && 'No hay eventos'}
             {activeTab === 'schedules' && 'No hay horarios'}
             {activeTab === 'rates' && 'No hay tarifas'}
             {activeTab === 'reservations' && 'No hay reservas'}
           </h3>
           <p className="text-gray-600 mb-4">
-            {activeTab === 'amenities' && 'Crea tu primera amenidad para comenzar'}
+            {activeTab === 'amenities' && 'Crea tu primer evento para comenzar'}
             {activeTab === 'schedules' && 'Crea tu primer horario para comenzar'}
             {activeTab === 'rates' && 'Crea tu primera tarifa para comenzar'}
             {activeTab === 'reservations' && 'Crea tu primera reserva para comenzar'}
@@ -555,7 +555,7 @@ const Amenities = () => {
             onClick={() => setShowModal(true)}
             className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
           >
-            Crear {activeTab === 'amenities' && 'Amenidad'}
+            Crear {activeTab === 'amenities' && 'Evento'}
             {activeTab === 'schedules' && 'Horario'}
             {activeTab === 'rates' && 'Tarifa'}
             {activeTab === 'reservations' && 'Reserva'}
@@ -717,7 +717,7 @@ const Amenities = () => {
             <div className="mt-3">
               <h3 className="text-lg font-medium text-gray-900 mb-4">
                 {editingItem ? 'Editar' : 'Nuevo'} {
-                  activeTab === 'amenities' && 'Amenidad'
+                  activeTab === 'amenities' && 'Evento'
                 }{activeTab === 'schedules' && 'Horario'}
                 {activeTab === 'rates' && 'Tarifa'}
                 {activeTab === 'reservations' && 'Reserva'}
@@ -736,7 +736,7 @@ const Amenities = () => {
                 
                 {activeTab === 'amenities' && (
                   <div>
-                    <label className="block text-sm font-medium text-gray-700">Tipo de Amenidad *</label>
+                    <label className="block text-sm font-medium text-gray-700">Tipo de Evento *</label>
                     <select
                       value={formData.amenity_type}
                       onChange={(e) => setFormData({...formData, amenity_type: e.target.value})}
@@ -821,7 +821,7 @@ const Amenities = () => {
                           className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded"
                         />
                         <label htmlFor="is_active" className="ml-2 block text-sm text-gray-900">
-                          Amenidad activa
+                          Evento activo
                         </label>
                       </div>
                       <div className="flex items-center">
@@ -841,14 +841,14 @@ const Amenities = () => {
                 ) : activeTab === 'schedules' ? (
                   <>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700">Amenidad *</label>
+                      <label className="block text-sm font-medium text-gray-700">Evento *</label>
                       <select
                         value={formData.amenity}
                         onChange={(e) => setFormData({...formData, amenity: e.target.value})}
                         className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                         required
                       >
-                        <option value="">Seleccionar amenidad</option>
+                        <option value="">Seleccionar Evento</option>
                         {amenities.map(amenity => (
                           <option key={amenity.id} value={amenity.id}>
                             {amenity.name}
@@ -911,14 +911,14 @@ const Amenities = () => {
                 ) : activeTab === 'rates' ? (
                   <>
                     <div>
-                      <label className="block text-sm font-medium text-gray-700">Amenidad *</label>
+                      <label className="block text-sm font-medium text-gray-700">Evento *</label>
                       <select
                         value={formData.amenity}
                         onChange={(e) => setFormData({...formData, amenity: e.target.value})}
                         className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                         required
                       >
-                        <option value="">Seleccionar amenidad</option>
+                        <option value="">Seleccionar Evento</option>
                         {amenities.map(amenity => (
                           <option key={amenity.id} value={amenity.id}>
                             {amenity.name}
@@ -999,14 +999,14 @@ const Amenities = () => {
                   <>
                     <div className="grid grid-cols-2 gap-4">
                       <div>
-                        <label className="block text-sm font-medium text-gray-700">Amenidad *</label>
+                        <label className="block text-sm font-medium text-gray-700">Evento *</label>
                         <select
                           value={formData.amenity}
                           onChange={(e) => setFormData({...formData, amenity: e.target.value})}
                           className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500"
                           required
                         >
-                          <option value="">Seleccionar amenidad</option>
+                          <option value="">Seleccionar Evento</option>
                           {amenities.map(amenity => (
                             <option key={amenity.id} value={amenity.id}>
                               {amenity.name}

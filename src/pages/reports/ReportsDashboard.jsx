@@ -309,8 +309,8 @@ const ReportsDashboard = () => {
       {/* Header */}
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Dashboard de Reportes</h1>
-          <p className="text-gray-600">KPIs y reportes de todos los módulos del sistema</p>
+          <h1 className="text-2xl font-bold text-gray-900">Reportes</h1>
+          <p className="text-gray-600">Reportes del Sistema</p>
         </div>
         <div className="flex space-x-3">
           <button 

@@ -171,8 +171,8 @@ const FinanceDashboard = () => {
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Dashboard Financiero</h1>
-          <p className="text-gray-600">Resumen de la situación financiera del condominio</p>
+          <h1 className="text-2xl font-bold text-gray-900">Finanzas</h1>
+          <p className="text-gray-600">Resumen Financiero del Condominio</p>
         </div>
         <div className="flex space-x-3">
           <PermissionGate permission="add_unitcharge">

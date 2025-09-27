@@ -172,8 +172,8 @@ const Schedules = () => {
       {/* Header */}
       <div className="flex justify-between items-center mb-6">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Horarios de Amenidades</h1>
-          <p className="text-gray-600">Gestiona los horarios de disponibilidad de las amenidades</p>
+          <h1 className="text-2xl font-bold text-gray-900">Horarios de Eventos</h1>
+          <p className="text-gray-600">Gestiona los horarios de disponibilidad de los eventos</p>
         </div>
         <button
           onClick={() => {
@@ -358,14 +358,14 @@ const Schedules = () => {
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-1">Amenidad *</label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Evento *</label>
                 <select
                   value={formData.amenity}
                   onChange={(e) => setFormData({...formData, amenity: e.target.value})}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   required
                 >
-                  <option value="">Seleccionar amenidad</option>
+                  <option value="">Seleccionar Evento</option>
                   {amenities.map(amenity => (
                     <option key={amenity.id} value={amenity.id}>
                       {amenity.name}

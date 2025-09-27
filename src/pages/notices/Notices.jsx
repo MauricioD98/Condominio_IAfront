@@ -240,7 +240,7 @@ const Notices = () => {
       <div className="flex justify-between items-center">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Gestión de Avisos</h1>
-          <p className="text-gray-600">Administra los avisos y comunicaciones del condominio</p>
+          <p className="text-gray-600">Avisos y Comunicados del Condominio</p>
         </div>
         <button
           onClick={() => setShowModal(true)}

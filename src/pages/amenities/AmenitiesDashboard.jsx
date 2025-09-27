@@ -112,8 +112,8 @@ const AmenitiesDashboard = () => {
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Dashboard de Amenidades</h1>
-          <p className="text-gray-600">Gestión de áreas comunes y reservas</p>
+          <h1 className="text-2xl font-bold text-gray-900">Eventos</h1>
+          <p className="text-gray-600">Areas comunes y reservas</p>
         </div>
         <div className="flex space-x-3">
           <PermissionGate permission="add_amenity">
@@ -167,8 +167,8 @@ const AmenitiesDashboard = () => {
               className="p-4 border border-gray-200 rounded-lg hover:bg-gray-50 text-left"
             >
               <Waves className="h-8 w-8 text-blue-600 mb-2" />
-              <h4 className="font-medium text-gray-900">Amenidades</h4>
-              <p className="text-sm text-gray-500">Gestionar áreas comunes</p>
+              <h4 className="font-medium text-gray-900">Eventos</h4>
+              <p className="text-sm text-gray-500">Gestionar Areas comunes</p>
             </button>
           </PermissionGate>
           
@@ -179,7 +179,7 @@ const AmenitiesDashboard = () => {
             >
               <Calendar className="h-8 w-8 text-green-600 mb-2" />
               <h4 className="font-medium text-gray-900">Reservas</h4>
-              <p className="text-sm text-gray-500">Gestionar reservas de amenidades</p>
+              <p className="text-sm text-gray-500">Gestionar reserva de Eventos</p>
             </button>
           </PermissionGate>
           
@@ -190,7 +190,7 @@ const AmenitiesDashboard = () => {
             >
               <Clock className="h-8 w-8 text-purple-600 mb-2" />
               <h4 className="font-medium text-gray-900">Horarios</h4>
-              <p className="text-sm text-gray-500">Configurar horarios de amenidades</p>
+              <p className="text-sm text-gray-500">Configurar Horarios de Eventos</p>
             </button>
           </PermissionGate>
           
